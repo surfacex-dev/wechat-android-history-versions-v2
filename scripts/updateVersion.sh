@@ -13,6 +13,8 @@ function check_update() {
     download_link="${parts[1]}"
     version="${parts[2]}"
     file_name="${parts[3]}"
+    # 为新版本生成独立目录页，并把主 README 版本名内链化
+    node scripts/generatePages.js
 }
 
 function wechat_download() {
@@ -42,7 +44,7 @@ function main() {
     check_update    
     latest_sum256=`shasum -a 256 README.md | awk '{print $1}'`
     if [ "$now_sum256" != "$latest_sum256" ]; then
-        git add README.md version.json && git commit -m "$version_info" && git push origin main
+        git add README.md version.json versions && git commit -m "$version_info" && git push origin main
         wechat_download
     fi        
 }
