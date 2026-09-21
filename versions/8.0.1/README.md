@@ -25,4 +25,5 @@
 ## 相关资源
 
 - 返回 [微信 Android 历史版本总目录](../../)
+- SurfaceX 网站下载：[微信 Android 8.0.1 官方下载](https://www.surfacex.cn/wechat/android/8.0.1.html)
 - 微信官方更新日志：[weixin.qq.com/updates](https://weixin.qq.com/updates)
